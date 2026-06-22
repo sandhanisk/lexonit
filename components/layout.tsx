@@ -273,7 +273,8 @@ export const Footer = ({ onNavigate }: { onNavigate: (path: string) => void }) =
         <div className="border-t border-slate-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
           <p>© 2025 LexonIT. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-violet-600 dark:hover:text-white">Privacy Policy</a>
+            <button onClick={() => onNavigate('/privacy-policy')} className="hover:text-violet-600 dark:hover:text-white transition-colors">Privacy Policy</button>
+            <button onClick={() => onNavigate('/sakhi-privacy')} className="hover:text-violet-600 dark:hover:text-white transition-colors">Sakhi Safety Privacy</button>
             <a href="#" className="hover:text-violet-600 dark:hover:text-white">Terms of Service</a>
           </div>
         </div>
