@@ -16,6 +16,8 @@ import { Card, GlowingCard } from './components/ui';
 import { User } from 'lucide-react';
 import { ChatWidget } from './components/chat-widget';
 import AboutPage from './pages/about';
+import PrivacyPolicyPage from './pages/privacy-policy';
+import SakhiPrivacyPage from './pages/sakhi-privacy';
 
 // Simple Router implementation since we are in a single file environment restriction
 // In a real Next.js app, this would be handled by the file system routing
@@ -46,7 +48,9 @@ const App = () => {
       '/contact': 'Contact Us | LexonIT',
       '/about': 'About | LexonIT',
       '/login': 'Login | LexonIT',
-      '/blog': 'Blog | Latest AI Insights'
+      '/blog': 'Blog | Latest AI Insights',
+      '/privacy-policy': 'Privacy Policy | LexonIT',
+      '/sakhi-privacy': 'Sakhi Safety Privacy Policy | LexonIT'
     };
     
     // Handle Titles for Service Pages
@@ -74,7 +78,7 @@ const App = () => {
     if (currentPath === '/services/it-providers') {
        return <ITProvidersPage onNavigate={setCurrentPath} />;
     }
-    
+
     // Match individual service pages (e.g. /services/ai-chat)
     if (currentPath.startsWith('/services/') && currentPath !== '/services') {
        const slug = currentPath.split('/services/')[1];
@@ -91,6 +95,8 @@ const App = () => {
       case '/contact': return <ContactPage />;
       case '/about': return <AboutPage onNavigate={setCurrentPath} />;
       case '/blog': return <BlogPage onNavigate={setCurrentPath} />;
+      case '/privacy-policy': return <PrivacyPolicyPage onNavigate={setCurrentPath} />;
+      case '/sakhi-privacy': return <SakhiPrivacyPage onNavigate={setCurrentPath} />;
       default: return <Home onNavigate={setCurrentPath} />;
     }
   };

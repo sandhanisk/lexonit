@@ -16,6 +16,7 @@ dist-ssr
 # Next.js
 .next/
 out/
+tsconfig.tsbuildinfo
 
 # Editor directories and files
 .vscode/*
