@@ -1,4 +1,4 @@
-# 🚀 Lexonit - AI Development Agency Portfolio
+# 🚀 Lexonit. - AI Development Agency Portfolio
 
 <div align="center">
 
